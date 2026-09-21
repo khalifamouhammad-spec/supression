@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Suppression de compte — Dakar Chicken Express</title>
+<style>
+  :root {
+    --bg: #ffffff;
+    --text: #1a1a1a;
+    --muted: #5a5a5a;
+    --accent: #c0392b;
+    --border: #e6e6e6;
+    --bg-soft: #faf7f5;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #14100f;
+      --text: #ecece9;
+      --muted: #b3aca8;
+      --accent: #e8776a;
+      --border: #2b2422;
+      --bg-soft: #1c1614;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #14100f;
+    --text: #ecece9;
+    --muted: #b3aca8;
+    --accent: #e8776a;
+    --border: #2b2422;
+    --bg-soft: #1c1614;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-padding-top: env(safe-area-inset-top, 0px); }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  header {
+    background: var(--bg-soft);
+    border-bottom: 1px solid var(--border);
+    padding: 2.5rem 1.5rem 2rem;
+    text-align: center;
+  }
+  header h1 {
+    margin: 0 0 .4rem;
+    font-size: 1.4rem;
+    color: var(--accent);
+  }
+  header p {
+    margin: 0;
+    color: var(--muted);
+    font-size: .9rem;
+  }
+  main {
+    max-width: 620px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 4rem;
+  }
+  p, li { font-size: .96rem; }
+  ul { padding-left: 1.2rem; }
+  li { margin-bottom: .4rem; }
+  form {
+    background: var(--bg-soft);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.4rem;
+    margin-top: 1.5rem;
+  }
+  .champ { margin-bottom: 1rem; }
+  .champ label {
+    display: block;
+    font-size: .85rem;
+    color: var(--muted);
+    margin-bottom: .3rem;
+  }
+  .champ input, .champ textarea {
+    width: 100%;
+    padding: .55rem .6rem;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: var(--bg);
+    color: var(--text);
+    font-family: inherit;
+    font-size: .95rem;
+  }
+  .champ textarea { resize: vertical; }
+  form button {
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    padding: .7rem 1.2rem;
+    border-radius: 6px;
+    font-size: .95rem;
+    cursor: pointer;
+  }
+  form button:hover { opacity: .9; }
+  .note-form {
+    margin: .8rem 0 0;
+    font-size: .85rem;
+    color: var(--muted);
+  }
+  .encadre {
+    border-left: 3px solid var(--accent);
+    background: var(--bg-soft);
+    padding: .9rem 1rem;
+    border-radius: 6px;
+    font-size: .9rem;
+    color: var(--muted);
+    margin: 1.2rem 0;
+  }
+  footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: .8rem;
+    padding: 2rem 1.5rem 3rem;
+  }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Suppression de compte et des données</h1>
+  <p>Application Dakar Chicken Express</p>
+</header>
+
+<main>
+  <p>Vous pouvez demander à tout moment la suppression de votre compte et des données associées collectées par l'application Dakar Chicken Express, éditée par Walf Chicken Express (NINEA 012657229), Dakar, Sénégal.</p>
+
+  <h2 style="font-size:1.05rem; color:var(--accent); margin-top:1.8rem;">Ce qui est supprimé</h2>
+  <ul>
+    <li>Votre profil (nom, téléphone, adresse, e-mail, mot de passe)</li>
+    <li>Votre historique de commandes lié à votre compte</li>
+    <li>Votre session et jeton de connexion</li>
+  </ul>
+
+  <div class="encadre">
+    Certaines informations liées à des commandes déjà facturées peuvent être conservées un temps limité pour répondre à des obligations comptables ou légales, même après la suppression du compte.
+  </div>
+
+  <h2 style="font-size:1.05rem; color:var(--accent); margin-top:1.8rem;">Faire ma demande</h2>
+  <p>Remplissez ce formulaire : votre application de messagerie s'ouvrira avec un e-mail pré-rempli à l'adresse <strong>khalifamouhammad@gmail.com</strong>. Il ne reste plus qu'à l'envoyer.</p>
+
+  <form id="form-suppression">
+    <div class="champ">
+      <label for="del-nom">Nom complet</label>
+      <input type="text" id="del-nom" name="nom" required>
+    </div>
+    <div class="champ">
+      <label for="del-telephone">Numéro de téléphone (utilisé pour le compte)</label>
+      <input type="tel" id="del-telephone" name="telephone" required>
+    </div>
+    <div class="champ">
+      <label for="del-email">E-mail (facultatif)</label>
+      <input type="email" id="del-email" name="email">
+    </div>
+    <div class="champ">
+      <label for="del-motif">Motif ou précisions (facultatif)</label>
+      <textarea id="del-motif" name="motif" rows="3"></textarea>
+    </div>
+    <button type="submit">Préparer ma demande de suppression</button>
+    <p class="note-form" id="form-note"></p>
+  </form>
+
+  <p style="margin-top:2rem; font-size:.88rem; color:var(--muted);">
+    Vous pouvez aussi écrire directement à
+    <a href="mailto:khalifamouhammad@gmail.com">khalifamouhammad@gmail.com</a>
+    en précisant votre nom et votre numéro de téléphone.
+  </p>
+</main>
+
+<footer>
+  © 2026 Walf Chicken Express — Dakar Chicken Express
+</footer>
+
+<script>
+  document.getElementById('form-suppression').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var nom = document.getElementById('del-nom').value.trim();
+    var telephone = document.getElementById('del-telephone').value.trim();
+    var email = document.getElementById('del-email').value.trim();
+    var motif = document.getElementById('del-motif').value.trim();
+
+    var sujet = 'Demande de suppression de compte - Dakar Chicken Express';
+    var corps = 'Bonjour,\n\n'
+      + 'Je souhaite demander la suppression de mon compte et des données associées (profil, adresses, historique de commandes) sur l\'application Dakar Chicken Express.\n\n'
+      + 'Nom complet : ' + nom + '\n'
+      + 'Numéro de téléphone du compte : ' + telephone + '\n'
+      + (email ? ('E-mail : ' + email + '\n') : '')
+      + (motif ? ('Précisions : ' + motif + '\n') : '')
+      + '\nMerci de confirmer la suppression.';
+
+    var lien = 'mailto:khalifamouhammad@gmail.com'
+      + '?subject=' + encodeURIComponent(sujet)
+      + '&body=' + encodeURIComponent(corps);
+
+    window.location.href = lien;
+
+    var note = document.getElementById('form-note');
+    note.textContent = 'Votre application de messagerie devrait s\'ouvrir avec l\'e-mail pré-rempli. Si rien ne se passe, écrivez directement à khalifamouhammad@gmail.com.';
+  });
+</script>
+
+</body>
+</html>
